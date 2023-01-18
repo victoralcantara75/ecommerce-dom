@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+body {
+    margin: 0 auto;
+    /* max-width: 1200px; */
+}
+
+p{
+    font-family: 'Inter';
+}
+
+span{
+    font-family: 'Inter';
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: 60%;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 6px 16px -2px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 6px 16px -2px rgba(0,0,0,0.43);
+    box-shadow: 0px 6px 16px -2px rgba(0,0,0,0.43);
+}
+
+.menu {
+    margin-top: 1em;
+    width: 25%;
+    height: 70px;
+    margin-right: 100px;
+    justify-content: space-around;
+}
+
+.menu-item{
+    font-family: 'Inter';
+    color: black;
+    font-size: 16px;
+    margin-top: 1.5em;
+}
+
+.menu-item:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 28px;
+    margin-left: 100px;
+}
+
+
+.vitrine {
+    background-color: white;
+    height: 100%;
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: white;
+    margin: 3px;
+    width: 32.5%;
+    height: 550px;
+    overflow-wrap: break-word;
+    -webkit-box-shadow: 0px 6px 16px -2px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 6px 16px -2px rgba(0,0,0,0.43);
+    box-shadow: 0px 6px 16px -2px rgba(0,0,0,0.43);
+    border: 2px solid transparent;
+}
+
+.card:hover{
+    border: 2px solid #37268C;
+}
+
+.tag{
+    width: 90px;
+    height: 20px;
+    margin-left: 10px;
+    background-color: #2E245E;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 200;
+    justify-content: center;
+}
+
+.product-name{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-detail{
+    margin-left: 10px;
+    font-size: 16px;
+    margin-right: 1em;
+    max-height: 40px;
+    overflow: hidden;
+}
+
+.product-price{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.add-carrinho{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.add-carrinho:hover{
+    color: #37268C;
+    text-decoration: underline #37268C;
+}
+
+.right{
+    height: 1100px;
+    width: 25%;
+    margin-top: 50px;
+}
+
+.pesquisa{
+    height: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.input{
+    border: none;
+    background-color: #f5f5f5;
+    height: 50px;
+    width: 66%;
+    font-size: 16px;
+}
+
+.search{
+    height: 50px;
+    width: 30%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.carrinho{
+    height: 600px;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-color: #f5f5f5;
+}
+
+.car-title{
+    width: 100%;
+    margin: 0;
+    height: 9%;
+    font-family: 'Inter';
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.car-items{
+    height: 90%;
+    overflow: auto;
+}
+
+.carrinho-vazio{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30%;
+}
+
+.adicione-itens{
+    text-align: center;
+    font-size: 18px;
+}
+
+.car-item{
+    background-color: white;
+    height: 30%;
+    margin: 10px;
+}
+
+.car-image{
+    width: 40%;
+    height: 100%;
+}
+
+.car-detail{
+    width: 60%;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.resume{
+    background-color: #333333;
+    height: 150px;
+    margin-left: 5%;
+}
+
+.resume-item{
+    height: 50%;
+    justify-content: space-between;
+}
+
+.text{
+    color: white;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 21px;
+}
+
+.value{
+    color: white;
+    margin-top: 20px;
+    margin-right: 50px;
+    font-size: 21px;
+}
