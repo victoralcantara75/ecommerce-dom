@@ -12,10 +12,10 @@
     <div class="header flex-container">
         <p class="logo"> Weartake </p>
         <div class="menu flex-container">
-            <span class="menu-item" href="">Todos</span>
-            <span class="menu-item" href="">Acessórios</span>
-            <span class="menu-item" href="">Calçados</span>
-            <span class="menu-item" href="">Camisetas</span>
+            <span class="menu-item" href="" onclick="carregarProdutos()">Todos</span>
+            <span class="menu-item" href="" onclick="carregarProdutos('Acessórios')">Acessórios</span>
+            <span class="menu-item" href="" onclick="carregarProdutos('Calçados')">Calçados</span>
+            <span class="menu-item" href="" onclick="carregarProdutos('Camisetas')">Camisetas</span>
         </div>
     </div>
 
@@ -27,7 +27,7 @@
         <div class="right">
             <div class="pesquisa">
                 <input type="text" placeholder="Digite sua pesquisa" class="input">
-                <button class="tag search">Pesquisar</button>
+                <button class="tag search" onclick="pesquisar()">Pesquisar</button>
             </div>
     
             <div class="carrinho">

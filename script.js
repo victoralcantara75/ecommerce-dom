@@ -75,7 +75,6 @@ function procurarProduto(nome){
 function adicionarCarrinho(props){
 
     productName = props.parentNode.childNodes[2].outerText
-    console.log(productName)
 
     productObj = procurarProduto(productName)
 
@@ -130,12 +129,18 @@ function removerCarrinho(props){
     mostrarResumo()
 }
 
-const carregarProdutos = () => {
+function carregarProdutos(filter = "all") {
 
     const vitrine = document.getElementsByClassName("vitrine")[0]
+
+    while(vitrine.childNodes.length > 0){
+      const item = vitrine.childNodes[0]
+      item.remove()
+    }
     
     for (let i = 0; i < data.length; i++){
 
+      if (filter == "all" || data[i].tag.includes(filter)){
         const card = document.createElement('div')
         card.classList = "card"
 
@@ -171,9 +176,64 @@ const carregarProdutos = () => {
         card.appendChild(add)
 
         vitrine.appendChild(card)
+      }
 
     }
 
+}
+
+function pesquisar(){
+  
+  const input = document.getElementsByClassName("input")[0].value
+
+  const vitrine = document.getElementsByClassName("vitrine")[0]
+
+  while(vitrine.childNodes.length > 0){
+    const item = vitrine.childNodes[0]
+    item.remove()
+  }
+    
+  for (let i = 0; i < data.length; i++){
+
+    if (data[i].nameItem.toLowerCase() === input.toLowerCase() || input === ""){
+      const card = document.createElement('div')
+      card.classList = "card"
+
+      const image = document.createElement('img')
+      image.src = data[i].img
+
+      const tag = document.createElement('div')
+      tag.classList = "tag flex-container"
+      tag.innerHTML = data[i].tag[0]
+
+      const name = document.createElement('p')
+      name.classList = "product-name"
+      name.innerHTML = data[i].nameItem
+
+      const detail = document.createElement('p')
+      detail.classList = "product-detail"
+      detail.innerHTML = data[i].description
+
+      const price = document.createElement('p')
+      price.classList = "product-price"
+      price.innerHTML = `R$ ${data[i].value},00`
+
+      const add = document.createElement('p')
+      add.classList = "add-carrinho"
+      add.innerHTML = "Adicionar ao carrinho"
+      add.setAttribute("onclick", `adicionarCarrinho(this)`)
+
+      card.appendChild(image)
+      card.appendChild(tag)
+      card.appendChild(name)
+      card.appendChild(detail)
+      card.appendChild(price)
+      card.appendChild(add)
+
+      vitrine.appendChild(card)
+    }
+
+  }
 }
 
 function criarResumo(){
